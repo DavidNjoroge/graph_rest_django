@@ -1,4 +1,9 @@
 from django.shortcuts import render
+from .models import Invetory
+from rest_framework.response import Response
+from rest_framework.views import APIView
+from .serializer import InvetorySerializer
+
 
 # Create your views here.
 class StoreInvetory(APIView):
