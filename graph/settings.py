@@ -40,7 +40,11 @@ INSTALLED_APPS = [
     'sports',
     'store',
     'rest_framework',
+    'graphene_django',
 ]
+GRAPHENE = {
+    'SCHEMA': 'graph.schema.schema'
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
