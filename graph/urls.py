@@ -16,9 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 from graphene_django.views import GraphQLView
+from rest_framework.authtoken import views as drf_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('store/',include('store.urls')),
-    path('graph/',GraphQLView.as_view(graphiql=True))
+    path('graph/',GraphQLView.as_view(graphiql=True)),
+    path('auth/',drf_views.obtain_auth_token, name = 'auth'),
 ]

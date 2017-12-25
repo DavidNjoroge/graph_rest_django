@@ -40,8 +40,15 @@ INSTALLED_APPS = [
     'sports',
     'store',
     'rest_framework',
+    'rest_framework.authtoken',
     'graphene_django',
 ]
+REST_FRAMEWORK = {
+    'DEFAULT_ATHENTICATION_CLASSES': (
+        'rest_framework.authentication.TokenAuthentication',
+    )
+}
+
 GRAPHENE = {
     'SCHEMA': 'graph.schema.schema'
 }
