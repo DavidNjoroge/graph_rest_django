@@ -20,6 +20,7 @@ from rest_framework.authtoken import views as drf_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('sports/', include('sports.urls')),
     path('store/',include('store.urls')),
     path('graph/',GraphQLView.as_view(graphiql=True)),
     path('auth/',drf_views.obtain_auth_token, name = 'auth'),

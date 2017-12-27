@@ -1,7 +1,13 @@
 import graphene
-import store.schema as store_schema
+import store.schema
 
-class Query(store_schema.Query,graphene.ObjectType):
+class Query(store.schema.Query,graphene.ObjectType):
     pass
 
-schema = graphene.Schema(query=Query)
+# class Mutation(store_schema.Mutation,graphene.ObjectType):
+#     pass
+
+class Mutation(store.schema.Mutation,graphene.ObjectType):
+    pass
+
+schema = graphene.Schema(query=Query,mutation=Mutation)
